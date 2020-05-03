@@ -1,0 +1,28 @@
+.site-branding {
+    .wrap {
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+  
+    text-align: center;
+  
+    .custom-logo-link {
+      padding: 0;
+    }
+  }
+  
+  .site-title {
+    text-transform: initial;
+    letter-spacing: 0em;
+    font-weight: normal;
+    font-size: 1.125rem;
+    font-family: 'sherwood', serif;
+  }
+  
+  .site-description {
+    font-family: 'Caudex', serif;
+  }
+  
+  figure.wp-block-image {
+    margin-bottom: 1.5em;
+  }
