@@ -19,12 +19,8 @@ Template: twentyseventeen
 7.0     Landing Page Styling
 8.0     Paypal Form Styling
 9.0     Footer Styling
-10.0    Media Query//min-width: 21em
 11.0    Media Query//max-width: 23.1em
-12.0    Media Query//min-width: 23.5em
-13.0    Media Query//min-width: 25em
 14.0    Media Query//min-width: 29.99em
-15.0    Media Query//min-width: 30em
 16.0    Media Query//min-width: 37.5em
 16.1    Front Page Styling
 16.2    Paypal Form Styling
@@ -36,11 +32,9 @@ Template: twentyseventeen
 19.3    Page Styling
 19.4    Landing Page Styling
 19.5    Top Nav Reset
-20.0    Media Query//min-width: 50em
 21.0    Media Query//min-width: 56em
 21.1    Misc Parent Theme Styling
 21.2    Top Nav Reset
-22.0    Media Query//min-width: 60em
 23.0    Media Query//min-width: 64em (1024px)
 23.1    Blog Styling
 23.2    Landing Page Styling
@@ -343,14 +337,6 @@ footer.site-footer aside.widget-area {
   }
 }
 
-/*10.0 Media Query//min-width: 21em*/
-
-@media screen and (min-width: 21em) {
-  .site-title {
-    padding: 0 calc((100% - 324px) / 2);
-  }
-}
-
 /*11.0 Media Query//max-width: 23.1em*/
 
 @media screen and (max-width: 23.1em) {
@@ -375,44 +361,10 @@ footer.site-footer aside.widget-area {
   }
 }
 
-/*12.0 Media Query//min-width: 23.5em*/
-
-@media screen and (min-width: 23.5em) {
-  .site-branding .wrap {
-    padding-left: 1.9em;
-    padding-right: 1.9em;
-  }
-}
-
-/*13.0    Media Query//min-width: 25em*/
-
-@media screen and (min-width: 25em) {
-  .site-description {
-    font-size: .875rem;
-  }
-}
-
 /*14.0    Media Query//min-width: 29.99em*/
 
 @media screen and (max-width: 29.99em) {
   body, button, input, select, textarea {
-    font-size: 1rem;
-  }
-}
-
-/*15.0    Media Query//min-width: 30em*/
-
-@media screen and (min-width: 30em) {
-  .site-branding {
-    padding: 1.75em 0;
-  }
-
-  .site-title {
-    font-size: 1.5rem;
-    padding: 0 calc((100% - 425px) / 2);
-  }
-
-  .site-description {
     font-size: 1rem;
   }
 }
@@ -529,15 +481,7 @@ footer.site-footer aside.widget-area {
 /*17.0 Media Query//min-width: 40em*/
 
 @media screen and (min-width: 40em) {
-  .site-branding .wrap {
-    padding-left: 0em;
-    padding-right: 0em;
-  }
-
-  .site-title {
-    padding: 0;
-  }
-
+  
   section.home-recent-posts div.older-articles article figure {
     flex: 0 0 160px;
   }
@@ -889,14 +833,6 @@ footer.site-footer aside.widget-area {
   }
 }
 
-/*20.0 Media Query//min-width: 50em*/
-
-@media screen and (min-width: 50em) {
-  .site-title {
-    font-size: 1.925rem;
-  }
-}
-
 /*21.0 Media Query//min-width: 56em*/
 
 @media screen and (min-width: 56em) {
@@ -1075,14 +1011,6 @@ footer.site-footer aside.widget-area {
     a {
       padding: 1em 1.25em;
     }
-  }
-}
-
-/*22.0 Media Query//min-width: 60em*/
-
-@media screen and (min-width: 60em) {
-  .site-title {
-    font-size: 2.25rem;
   }
 }
 
