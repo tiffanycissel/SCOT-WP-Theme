@@ -1,0 +1,38 @@
+body {
+    &.blog h1.page-title, &.archive h1.page-title {
+      padding-top: 0;
+    }
+  
+    &.blog .page-header {
+      padding-bottom: 1em;
+    }
+  
+    &.archive {
+      .page-header {
+        padding-bottom: 1em;
+      }
+  
+      &.page-one-column:not(.has-sidebar) .page-header {
+        margin-bottom: 0;
+      }
+    }
+  
+    &.blog div#primary article, &.archive div#primary article {
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  
+    &.blog div#primary article header.entry-header, &.archive div#primary article header.entry-header {
+      display: flex;
+      flex-flow: column-reverse nowrap;
+      margin: 0;
+    }
+  
+    &.blog div#primary article div.post-thumbnail, &.archive div#primary article div.post-thumbnail, &.single-post div.scot-single-featured-image-header {
+      text-align: center;
+    }
+  }
+  
+  article.page div.entry-content div.scot-single-featured-image-header {
+    text-align: center;
+  }

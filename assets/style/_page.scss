@@ -1,0 +1,17 @@
+body.page {
+    .entry-title, &:not(.twentyseventeen-front-page) .entry-title {
+      font-size: 1.5rem;
+      text-transform: initial;
+      letter-spacing: .075em;
+    }
+  }
+  
+  .page .panel-content .entry-title, .page-title {
+    font-size: 1.5rem;
+    text-transform: initial;
+    letter-spacing: .075em;
+  }
+  
+  article.page div.entry-content div.scot-single-featured-image-header {
+    margin-bottom: 1.5em;
+  }

@@ -1,0 +1,21 @@
+footer.site-footer aside.widget-area {
+    section.widget_media_image {
+      text-align: center;
+    }
+  
+    p.scot-logo-caption {
+      text-align: center;
+      font-family: 'sherwood', serif;
+      padding: 0 calc((50% - 7em)/2);
+    }
+  
+    section.widget_media_image, p.scot-logo-caption {
+      padding-bottom: 0;
+    }
+  
+    div {
+      &.footer-widget-1 section, &.footer-widget-2 section, &.footer-widget-3 section {
+        padding-bottom: 0;
+      }
+    }
+  }

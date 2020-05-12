@@ -1,0 +1,29 @@
+form[action*="paypal"] {
+    display: flex;
+    flex-flow: column wrap;
+
+    @media(min-width: 37.5em) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    select {
+        &.membershipOptions {
+            @media(min-width: 37.5em){
+                flex: 0 0 calc(100% - 150px);
+            }
+        }
+    }
+  
+    input[name="submit"] {
+      max-width: 107px;
+      align-self: center;
+      margin-top: 25px;
+
+      @media(min-width: 37.5em) {
+        max-height: 27px;
+        margin: auto 0;
+        align-self: normal;
+      }
+    }
+  }

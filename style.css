@@ -18,18 +18,11 @@ Template: twentyseventeen
 7.0     Landing Page Styling
 8.0     Paypal Form Styling
 9.0     Footer Styling
-11.0    Media Query//max-width: 23.1em
 14.0    Media Query//min-width: 29.99em
-16.0    Media Query//min-width: 37.5em
-16.1    Front Page Styling
-16.2    Paypal Form Styling
-17.0    Media Query//min-width: 40em
 18.0    Media Query//min-width: 46em
 19.0    Media Query//min-width: 48em (768px)
 19.1    Misc Parent Theme Styling
-19.2    Lists and Navigation
 19.3    Page Styling
-19.4    Landing Page Styling
 19.5    Top Nav Reset
 21.0    Media Query//min-width: 56em
 21.1    Misc Parent Theme Styling
@@ -74,6 +67,11 @@ nav.scot-breadcrumb-menu ul li {
   font-size: 0.9375rem;
   color: #4b4b4b;
 }
+@media screen and (min-width: 48em) {
+  nav.scot-breadcrumb-menu ul li {
+    font-size: 0.825rem;
+  }
+}
 nav.scot-breadcrumb-menu ul li a, nav.scot-breadcrumb-menu ul li.current {
   color: #4b4b4b;
 }
@@ -86,6 +84,14 @@ nav.scot-breadcrumb-menu ul li:not(.current)::after {
 
 body.single nav.scot-breadcrumb-menu {
   padding: 2.5em 2em 0 2em;
+}
+@media screen and (min-width: 48em) {
+  body.single nav.scot-breadcrumb-menu {
+    padding-left: 3em;
+    padding-right: 3em;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 /*3.0 Site Branding*/
@@ -239,6 +245,11 @@ section.home-recent-posts article figure img {
 section.home-recent-posts article.recent-post-1 {
   flex-flow: column nowrap;
 }
+@media (min-width: 37.5em) {
+  section.home-recent-posts article.recent-post-1 {
+    margin-bottom: 2em;
+  }
+}
 section.home-recent-posts article.recent-post-1 figure {
   overflow-y: hidden;
   order: 1;
@@ -258,8 +269,15 @@ section.home-recent-posts article.recent-post-1 p {
 section.home-recent-posts article.recent-post-1 p a {
   text-decoration: underline;
 }
-section.home-recent-posts article.recent-post-1 h3, section.home-recent-posts article.recent-post-1 p, section.home-recent-posts article.recent-post-1 figure {
+section.home-recent-posts article.recent-post-1 h3,
+section.home-recent-posts article.recent-post-1 p,
+section.home-recent-posts article.recent-post-1 figure {
   margin: 0;
+}
+@media (min-width: 37.5em) {
+  section.home-recent-posts div.older-articles {
+    flex-flow: row nowrap;
+  }
 }
 section.home-recent-posts div.older-articles article {
   flex-flow: row-reverse nowrap;
@@ -269,22 +287,82 @@ section.home-recent-posts div.older-articles article {
   height: 66px;
   overflow-y: hidden;
 }
-section.home-recent-posts div.older-articles article h3, section.home-recent-posts div.older-articles article figure {
+section.home-recent-posts div.older-articles article h3,
+section.home-recent-posts div.older-articles article figure {
   margin: 0;
 }
 section.home-recent-posts div.older-articles article h3 {
   padding: 0 5px;
 }
+@media (min-width: 37.5em) {
+  section.home-recent-posts div.older-articles article h3 {
+    min-height: 61px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-recent-posts div.older-articles article h3.recent-post-long-title {
+    min-height: 93px;
+  }
+}
 section.home-recent-posts div.older-articles article figure {
   flex: 0 0 100px;
+}
+@media (min-width: 37.5em) {
+  section.home-recent-posts div.older-articles article figure {
+    flex: 0 0 150px;
+    overflow-y: hidden;
+  }
+}
+@media screen and (min-width: 40em) {
+  section.home-recent-posts div.older-articles article figure {
+    flex: 0 0 160px;
+  }
+}
+@media screen and (min-width: 46em) {
+  section.home-recent-posts div.older-articles article figure {
+    flex: 0 0 175px;
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-recent-posts div.older-articles article {
+    flex-flow: column-reverse nowrap;
+    height: initial;
+    flex: 0 0 44%;
+    margin: 0;
+    justify-content: flex-end;
+    align-items: normal;
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-recent-posts div.older-articles {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-action h2 {
+    flex: 0 0 100%;
+  }
 }
 section.home-action div {
   border: thin solid lightgrey;
   border-radius: 5px;
   text-align: center;
 }
+@media (min-width: 37.5em) {
+  section.home-action div {
+    flex: 0 0 45%;
+  }
+}
 section.home-action div:not(.first-action) {
   margin-top: 10px;
+}
+@media (min-width: 37.5em) {
+  section.home-action div:not(.first-action) {
+    margin-top: initial;
+  }
 }
 section.home-action div a {
   background-image: url(assets/img/argyle2_trans25_33.png);
@@ -300,17 +378,96 @@ section.home-action div a {
 section.home-action div:nth-of-type(1) {
   background-color: rgba(0, 128, 0, 0.5);
 }
+@media (max-width: 23.1em) {
+  section.home-action div:nth-of-type(1) a {
+    --customPad: calc((100% - 80px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-action div:nth-of-type(1) a {
+    --customPad: calc((100% - 80px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
+}
 section.home-action div:nth-of-type(2) {
   background-color: rgba(128, 0, 0, 0.5);
+}
+@media (max-width: 23.1em) {
+  section.home-action div:nth-of-type(2) a {
+    --customPad: calc((100% - 110px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-action div:nth-of-type(2) a {
+    --customPad: calc((100% - 110px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
 }
 section.home-action div:nth-of-type(3) {
   background-color: rgba(0, 0, 139, 0.5);
 }
+@media (min-width: 37.5em) {
+  section.home-action div:nth-of-type(3) {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-action div:nth-of-type(3) a {
+    --customPad: calc((100% - 175px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
+}
 section.home-action div:nth-of-type(4) {
   background-color: rgba(218, 165, 32, 0.5);
 }
+@media (min-width: 37.5em) {
+  section.home-action div:nth-of-type(4) {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 23.1em) {
+  section.home-action div:nth-of-type(4) a {
+    --customPad: calc((100% - 100px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-action div:nth-of-type(4) a {
+    --customPad: calc((100% - 100px) / 2);
+    padding-left: var(--customPad);
+    padding-right: var(--customPad);
+  }
+}
+@media (min-width: 37.5em) {
+  section.home-action {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+}
 
 /*7.0 Landing Page Styling*/
+@media screen and (min-width: 48em) {
+  div.content-area section.landing-page-children {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 48em) {
+  div.content-area section.landing-page-children article {
+    flex: 0 0 33%;
+    text-align: center;
+  }
+}
 div.content-area section.landing-page-children article figure {
   border: thin rgba(211, 211, 211, 0.8) solid;
   box-shadow: 0px 0px 10px rgba(211, 211, 211, 0.8);
@@ -319,13 +476,33 @@ div.content-area section.landing-page-children article figure {
   height: 150px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 48em) {
+  div.content-area section.landing-page-children article figure {
+    flex-flow: column nowrap;
+    background: none;
+    height: auto;
+    border: initial;
+    box-shadow: initial;
+  }
+}
 div.content-area section.landing-page-children article figure img {
   flex: 0 0 150px;
   display: block;
 }
+@media screen and (min-width: 48em) {
+  div.content-area section.landing-page-children article figure img {
+    flex: 0 0 auto;
+  }
+}
 div.content-area section.landing-page-children article figure figcaption {
   padding-left: 0.5em;
   flex: 0 1 calc(100% - 150px);
+}
+@media screen and (min-width: 48em) {
+  div.content-area section.landing-page-children article figure figcaption {
+    padding-left: 0;
+    flex: 0 1 auto;
+  }
 }
 div.content-area section.landing-page-children article figure figcaption p {
   margin: 0;
@@ -340,10 +517,28 @@ form[action*=paypal] {
   display: flex;
   flex-flow: column wrap;
 }
+@media (min-width: 37.5em) {
+  form[action*=paypal] {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 37.5em) {
+  form[action*=paypal] select.membershipOptions {
+    flex: 0 0 calc(100% - 150px);
+  }
+}
 form[action*=paypal] input[name=submit] {
   max-width: 107px;
   align-self: center;
   margin-top: 25px;
+}
+@media (min-width: 37.5em) {
+  form[action*=paypal] input[name=submit] {
+    max-height: 27px;
+    margin: auto 0;
+    align-self: normal;
+  }
 }
 
 /*9.0 Footer Styling*/
@@ -362,126 +557,14 @@ footer.site-footer aside.widget-area div.footer-widget-1 section, footer.site-fo
   padding-bottom: 0;
 }
 
-/*11.0 Media Query//max-width: 23.1em*/
-@media screen and (max-width: 23.1em) {
-  section.home-action div:nth-of-type(1) a {
-    --customPad:calc((100% - 80px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-  section.home-action div:nth-of-type(2) a {
-    --customPad:calc((100% - 110px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-  section.home-action div:nth-of-type(4) a {
-    --customPad:calc((100% - 100px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-}
 /*14.0    Media Query//min-width: 29.99em*/
 @media screen and (max-width: 29.99em) {
   body, button, input, select, textarea {
     font-size: 1rem;
   }
 }
-/*16.0 Media Query//min-width: 37.5em*/
-@media screen and (min-width: 37.5em) {
-  /*16.1 Front Page Styling*/
-  section.home-recent-posts div.older-articles, section.home-action {
-    display: flex;
-    justify-content: space-between;
-  }
-  section.home-recent-posts div.older-articles {
-    flex-flow: row nowrap;
-  }
-  section.home-recent-posts article.recent-post-1 {
-    margin-bottom: 2em;
-  }
-  section.home-recent-posts div.older-articles article {
-    flex-flow: column-reverse nowrap;
-    height: initial;
-    flex: 0 0 44%;
-    margin: 0;
-    justify-content: flex-end;
-    align-items: normal;
-  }
-  section.home-recent-posts div.older-articles article h3 {
-    min-height: 61px;
-    display: flex;
-    align-items: center;
-  }
-  section.home-recent-posts div.older-articles article h3.recent-post-long-title {
-    min-height: 93px;
-  }
-  section.home-recent-posts div.older-articles article figure {
-    flex: 0 0 150px;
-    overflow-y: hidden;
-  }
-  section.home-action {
-    flex-flow: row wrap;
-  }
-  section.home-action h2 {
-    flex: 0 0 100%;
-  }
-  section.home-action div {
-    flex: 0 0 45%;
-  }
-  section.home-action div:not(.first-action) {
-    margin-top: initial;
-  }
-  section.home-action div:nth-of-type(3), section.home-action div:nth-of-type(4) {
-    margin-top: 15px;
-  }
-  section.home-action div:nth-of-type(1) a {
-    --customPad:calc((100% - 80px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-  section.home-action div:nth-of-type(2) a {
-    --customPad:calc((100% - 110px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-  section.home-action div:nth-of-type(3) a {
-    --customPad:calc((100% - 175px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-  section.home-action div:nth-of-type(4) a {
-    --customPad:calc((100% - 100px) / 2);
-    padding-left: var(--customPad);
-    padding-right: var(--customPad);
-  }
-
-  /*16.2 Paypal Form Styling*/
-  form[action*=paypal] {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-  form[action*=paypal] select.membershipOptions {
-    flex: 0 0 calc(100% - 150px);
-  }
-  form[action*=paypal] input[name=submit] {
-    max-height: 27px;
-    margin: auto 0;
-    align-self: normal;
-  }
-}
-/*17.0 Media Query//min-width: 40em*/
-@media screen and (min-width: 40em) {
-  section.home-recent-posts div.older-articles article figure {
-    flex: 0 0 160px;
-  }
-}
 /*18.0 Media Query//min-width: 46em*/
 @media screen and (min-width: 46em) {
-  section.home-recent-posts div.older-articles article figure {
-    flex: 0 0 175px;
-  }
-
   body.blog:not(.has-sidebar) #primary article, body.archive:not(.has-sidebar) #primary article {
     float: initial;
     display: grid;
@@ -553,18 +636,6 @@ footer.site-footer aside.widget-area div.footer-widget-1 section, footer.site-fo
     transition: background 0.2s;
   }
 
-  /*19.2 Lists and Navigation*/
-  nav.scot-breadcrumb-menu ul li {
-    font-size: 0.825rem;
-  }
-
-  body.single nav.scot-breadcrumb-menu {
-    padding-left: 3em;
-    padding-right: 3em;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-
   /*19.3 Page Styling*/
   .page.page-one-column .entry-header {
     margin-bottom: 30px;
@@ -584,31 +655,6 @@ footer.site-footer aside.widget-area div.footer-widget-1 section, footer.site-fo
   body.single-post div.scot-single-featured-image-header {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-  }
-
-  /*19.4 Landing Page Styling*/
-  div.content-area section.landing-page-children {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  div.content-area section.landing-page-children article {
-    flex: 0 0 33%;
-    text-align: center;
-  }
-  div.content-area section.landing-page-children article figure {
-    flex-flow: column nowrap;
-    background: none;
-    height: auto;
-    border: initial;
-    box-shadow: initial;
-  }
-  div.content-area section.landing-page-children article figure img {
-    flex: 0 0 auto;
-  }
-  div.content-area section.landing-page-children article figure figcaption {
-    padding-left: 0;
-    flex: 0 1 auto;
   }
 
   /*19.5 Top Nav Reset*/

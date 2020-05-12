@@ -1,0 +1,49 @@
+ul, ol {
+    list-style-position: inside;
+  }
+  
+  li {
+    text-indent: -.9em;
+    padding-left: 1em;
+  }
+  
+  ul#menu-social li {
+    text-indent: initial;
+    padding-left: initial;
+  }
+  
+  nav.scot-breadcrumb-menu ul li {
+    text-indent: initial;
+    padding-left: initial;
+    list-style-type: none;
+    display: inline;
+    font-size: .9375rem;
+    color: rgb(75, 75, 75);
+
+    @media screen and (min-width: 48em) {
+        font-size: .825rem;
+    }
+  
+    a, &.current {
+      color: rgb(75, 75, 75);
+    }
+  
+    a {
+      text-decoration: underline;
+    }
+  
+    &:not(.current)::after {
+      content: " / ";
+    }
+  }
+  
+  body.single nav.scot-breadcrumb-menu {
+    padding: 2.5em 2em 0 2em;
+
+    @media screen and (min-width: 48em) {
+        padding-left: 3em;
+        padding-right: 3em;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+  }
