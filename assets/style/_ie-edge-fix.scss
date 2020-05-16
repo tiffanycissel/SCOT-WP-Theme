@@ -1,0 +1,102 @@
+button.search-submit,
+ul#menu-social li {
+    text-indent: 0;
+}
+
+body {
+    &.noFitContent {
+        &:not(.home-page) figure.wp-block-image {
+            max-width: 425px;
+        }
+
+        &.home-page figure.wp-block-image {
+            max-width: 600px;
+            overflow-y: visible;
+        }
+
+        section.home-recent-posts div.older-articles article {
+            overflow-x: hidden;
+        }
+    }
+
+    &.noObjFit div.custom-header-media {
+        background-image: url(assets/img/0618181836_c-edits_v2_medium_300.jpg);
+    }
+
+    &.noTxtIndtInit ul#menu-social li {
+        text-indent: 0px;
+        padding-left: 0px;
+    }
+}
+
+nav.scot-breadcrumb-menu ul li {
+    text-indent: 0px;
+    padding-left: 0px;
+}
+
+@media screen and (min-width: 37.5em) {
+    body {
+        &.noHtInit section {
+            &.home-recent-posts div.older-articles article {
+                height: 250px;
+
+                h3 {
+                    width: 100%;
+
+                    &.recent-post-long-title {
+                        min-height: 75px;
+                    }
+                }
+            }
+
+            &.home-action div {
+                margin-top: 15px;
+
+                &:nth-of-type(1) a {
+                    padding-left: 28%;
+                    padding-right: 28%;
+                }
+
+                &:nth-of-type(2) a {
+                    padding-left: 23%;
+                    padding-right: 23%;
+                }
+
+                &:nth-of-type(3) a {
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
+
+                &:nth-of-type(4) a {
+                    padding-left: 30%;
+                    padding-right: 30%;
+                }
+            }
+        }
+
+        &.noTxtTransInit .site-title {
+            text-transform: none;
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+    body.noBorderInit div.content-area section.landing-page-children article figure {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    body.noHtInit section.home-action div {
+        &:nth-of-type(1) a {
+            padding-left: 56px;
+            padding-right: 56px;
+        }
+
+        &:nth-of-type(4) a {
+            padding-left: 46px;
+            padding-right: 46px;
+        }
+    }
+}

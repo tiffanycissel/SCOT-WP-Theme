@@ -36,3 +36,11 @@ body {
   article.page div.entry-content div.scot-single-featured-image-header {
     text-align: center;
   }
+
+  @media screen and (min-width: 64em) {
+    .archive.page-one-column:not(.has-sidebar) {
+      .page-header, #primary {
+        max-width: 1024px;
+      }
+    } 
+  }

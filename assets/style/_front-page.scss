@@ -249,3 +249,68 @@ section {
     }
   }
 }
+
+@media screen and (min-width: 64em) {
+  section {
+
+    &.home-recent-posts,
+    &.home-action {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+    }
+
+    &.home-recent-posts {
+      h2 {
+        flex: 0 0 100%;
+      }
+
+      article.recent-post-1 {
+        flex: 0 0 60%;
+        margin: 0;
+
+        figure {
+          height: initial;
+        }
+      }
+
+      div.older-articles {
+        flex: 0 0 30%;
+        flex-flow: column wrap;
+        display: grid;
+        grid-gap: 25px;
+        grid-template-rows: repeat(2, 0.5fr);
+
+        article {
+          flex: 0 0 46%;
+          align-items: initial;
+          display: flex;
+
+          /* display: grid;
+          grid-template-rows: auto 60px; */
+
+          h3 {
+            font-size: 1.1rem;
+            grid-row: 2/3;
+            align-self: center;
+            flex: 1;
+
+            &.recent-post-long-title {
+              min-height: initial;
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    &.home-action div {
+      flex: 0 0 20%;
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        margin-top: initial;
+      }
+    }
+  }
+}

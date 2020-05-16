@@ -1,17 +1,47 @@
 body.page {
-    .entry-title, &:not(.twentyseventeen-front-page) .entry-title {
-      font-size: 1.5rem;
-      text-transform: initial;
-      letter-spacing: .075em;
-    }
-  }
-  
-  .page .panel-content .entry-title, .page-title {
+
+  .entry-title,
+  &:not(.twentyseventeen-front-page) .entry-title {
     font-size: 1.5rem;
     text-transform: initial;
     letter-spacing: .075em;
   }
-  
-  article.page div.entry-content div.scot-single-featured-image-header {
-    margin-bottom: 1.5em;
+}
+
+.page .panel-content .entry-title,
+.page-title {
+  font-size: 1.5rem;
+  text-transform: initial;
+  letter-spacing: .075em;
+}
+
+article.page div.entry-content div.scot-single-featured-image-header {
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 48em) {
+
+  /*19.3 Page Styling*/
+
+  .page.page-one-column .entry-header {
+    margin-bottom: 30px;
+
+    h1.entry-title {
+      font-size: 2rem;
+    }
   }
+
+  body.page:not(.twentyseventeen-front-page) .entry-title, .page-title {
+    font-size: 2rem;
+  }
+
+  .site-content {
+    padding-top: 2.5em;
+  }  
+}
+
+@media screen and (min-width: 64em) {
+  .page.page-one-column:not(.twentyseventeen-front-page) #primary {
+    max-width: 1024px;
+  }
+}
