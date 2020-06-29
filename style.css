@@ -463,40 +463,59 @@ figure.wp-block-image {
 }
 
 /*4.0 Blog & Archive Styling*/
-body.blog h1.page-title, body.archive h1.page-title {
+body.blog h1.page-title {
   padding-top: 0;
 }
-body.blog .page-header {
-  padding-bottom: 1em;
+body.blog div#primary article {
+  display: flex;
+  flex-flow: column nowrap;
 }
-body.archive .page-header {
+body.blog div#primary article header.entry-header {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  margin: 0;
+}
+body.blog div#primary article div.post-thumbnail {
+  text-align: center;
+}
+body.blog .page-header {
   padding-bottom: 1em;
 }
 body.archive.page-one-column:not(.has-sidebar) .page-header {
   margin-bottom: 0;
 }
-body.blog div#primary article, body.archive div#primary article {
+@media screen and (min-width: 64em) {
+  body.archive.page-one-column:not(.has-sidebar) .page-header {
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 64em) {
+  body.archive.page-one-column:not(.has-sidebar) #primary {
+    max-width: 1024px;
+  }
+}
+body.archive h1.page-title {
+  padding-top: 0;
+}
+body.archive div#primary article {
   display: flex;
   flex-flow: column nowrap;
 }
-body.blog div#primary article header.entry-header, body.archive div#primary article header.entry-header {
+body.archive div#primary article header.entry-header {
   display: flex;
   flex-flow: column-reverse nowrap;
   margin: 0;
 }
-body.blog div#primary article div.post-thumbnail, body.archive div#primary article div.post-thumbnail, body.single-post div.scot-single-featured-image-header {
+body.archive div#primary article div.post-thumbnail {
+  text-align: center;
+}
+body.archive .page-header {
+  padding-bottom: 1em;
+}
+body.single-post div.scot-single-featured-image-header {
   text-align: center;
 }
 
-article.page div.entry-content div.scot-single-featured-image-header {
-  text-align: center;
-}
-
-@media screen and (min-width: 64em) {
-  .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
-    max-width: 1024px;
-  }
-}
 @media screen and (min-width: 46em) {
   body.blog:not(.has-sidebar) #primary article, body.archive:not(.has-sidebar) #primary article {
     float: initial;
@@ -513,7 +532,7 @@ article.page div.entry-content div.scot-single-featured-image-header {
     grid-column: 1/2;
     grid-row: 1/3;
   }
-  body.blog:not(.has-sidebar) #primary article div.entry-content {
+  body.blog:not(.has-sidebar) #primary article div.entry-content, body.archive:not(.has-sidebar) #primary article div.entry-content {
     grid-column: 2/3;
   }
 }
@@ -544,6 +563,7 @@ body.page .entry-title, body.page:not(.twentyseventeen-front-page) .entry-title 
 
 article.page div.entry-content div.scot-single-featured-image-header {
   margin-bottom: 1.5em;
+  text-align: center;
 }
 
 @media screen and (min-width: 48em) {

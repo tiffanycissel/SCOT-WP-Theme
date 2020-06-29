@@ -1,46 +1,98 @@
 body {
-    &.blog h1.page-title, &.archive h1.page-title {
-      padding-top: 0;
+  &.blog {
+    h1 {
+      &.page-title {
+        padding-top: 0;
+      }
     }
-  
-    &.blog .page-header {
+
+    div {
+      &#primary {
+        article {
+          display: flex;
+          flex-flow: column nowrap;
+
+          header {
+            &.entry-header {
+              display: flex;
+              flex-flow: column-reverse nowrap;
+              margin: 0;
+            }
+          }
+
+          div {
+            &.post-thumbnail {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .page-header {
       padding-bottom: 1em;
     }
-  
-    &.archive {
-      .page-header {
-        padding-bottom: 1em;
-      }
-  
-      &.page-one-column:not(.has-sidebar) .page-header {
-        margin-bottom: 0;
-      }
-    }
-  
-    &.blog div#primary article, &.archive div#primary article {
-      display: flex;
-      flex-flow: column nowrap;
-    }
-  
-    &.blog div#primary article header.entry-header, &.archive div#primary article header.entry-header {
-      display: flex;
-      flex-flow: column-reverse nowrap;
-      margin: 0;
-    }
-  
-    &.blog div#primary article div.post-thumbnail, &.archive div#primary article div.post-thumbnail, &.single-post div.scot-single-featured-image-header {
-      text-align: center;
-    }
-  }
-  
-  article.page div.entry-content div.scot-single-featured-image-header {
-    text-align: center;
   }
 
-  @media screen and (min-width: 64em) {
-    .archive.page-one-column:not(.has-sidebar) {
-      .page-header, #primary {
-        max-width: 1024px;
+  &.archive {
+    &.page-one-column {
+      &:not(.has-sidebar) {
+        .page-header {
+          margin-bottom: 0;
+
+          @media screen and (min-width: 64em) {
+            max-width: 1024px;
+          }
+        }
+
+        #primary {
+          @media screen and (min-width: 64em) {
+            max-width: 1024px;
+          }
+        }
       }
-    } 
+    }
+
+    h1 {
+      &.page-title {
+        padding-top: 0;
+      }
+    }
+
+    div {
+      &#primary {
+        article {
+          display: flex;
+          flex-flow: column nowrap;
+
+          header {
+            &.entry-header {
+              display: flex;
+              flex-flow: column-reverse nowrap;
+              margin: 0;
+            }
+          }
+
+          div {
+            &.post-thumbnail {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .page-header {
+      padding-bottom: 1em;
+    }
+
   }
+
+  &.single-post {
+    div {
+     &.scot-single-featured-image-header {
+        text-align: center;
+      }
+    }
+  }
+}
